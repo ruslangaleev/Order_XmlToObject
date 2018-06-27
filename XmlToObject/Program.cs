@@ -28,7 +28,7 @@ namespace XmlToObject
 
         private static string GetTextFromFile(string fileName)
         {
-            return File.ReadAllTextAsync(fileName).GetAwaiter().GetResult();
+            return File.ReadAllTextAsync(Path.Combine("SourceFiles", fileName)).GetAwaiter().GetResult();
         }
     }
 }
